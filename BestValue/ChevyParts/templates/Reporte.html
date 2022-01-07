@@ -1,0 +1,15 @@
+{% extends 'proveedores.html' %}
+{% block titulo %}Crear Repuesto{% endblock titulo %}
+
+
+{% block cuerpo %}
+
+<div class="tamaño">
+       {% for resultados in reporte %}
+            {{resultados.Total}}
+            {{resultados.modelo}}
+        {%endfor%}
+        
+</div>
+
+{% endblock cuerpo %}

@@ -90,3 +90,4 @@ def eliminarEmpleado(request, id ):
     empleados = Empleado.objects.get(id = id)
     empleados.delete()
     return redirect('index_empleados')
+

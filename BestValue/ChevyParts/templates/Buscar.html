@@ -1,0 +1,48 @@
+{% extends 'proveedores.html' %}
+
+
+
+{% block cuerpo %}
+
+<div class="tamaño">
+    <form method= "post">
+        {% csrf_token %}
+        <input type="text" name="marca" placeholder="Marca">
+        <input type="text" name="modelo" placeholder="Modelo">
+        <input type="text" name="año" placeholder="Año">
+        <input type="text" name="nombre_repuesto" placeholder="Nombre repuesto">
+        
+        <input type="submit" value="Search"/>
+        <br>
+        <br>
+        <table >
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Año</th>
+                    <th>Repuesto</th>
+                    <th>Precio</th>
+                    <th>Garantia</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in result %}
+                <tr>
+                    {% for i in item %}
+                    <td>
+                        {{i}}
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+    </form>
+
+    
+        
+</div>
+
+{% endblock cuerpo %}

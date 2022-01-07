@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from Proveedores.views import crearProveedor,editarProveedor,eliminarProveedor, inicio
 from Empleados.views import editarEmpleado,inicio2, crearEmpleado, eliminarEmpleado, register
-from Repuestos.views import crearRepuesto, editarRepuesto, repuesto, eliminarRepuesto
+from Repuestos.views import crearRepuesto, editarRepuesto, repuesto, eliminarRepuesto, store_proc, reporte
 from Vehiculos.views import crearVehiculo, indexVehiculo, editarVehiculo, eliminarVehiculo
 from django.conf import settings
 from django.conf.urls.static import static
@@ -43,7 +43,8 @@ urlpatterns = [
     path('editar_vehiculo/<int:id>', editarVehiculo, name ="editar_vehiculo"),
     path('eliminar_vehiculo/<int:id>', eliminarVehiculo, name ="eliminar_vehiculo"),
     path('registro/',register, name='registro'),
-
+    path('buscar/',store_proc, name= "BuscarRepuesto" ),
+    path('reporte/', reporte ,name = 'Reporte'),
   
 ]
 if settings.DEBUG:

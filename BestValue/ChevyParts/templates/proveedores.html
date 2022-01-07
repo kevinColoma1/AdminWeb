@@ -23,34 +23,37 @@
                     <h1 class="Centrar">ChevyParts</h1>
                 </div>
             </div>
-            <nav id="menu">
-                <ul>
-                    <li><a href="{% url 'index_repuesto' %}">Repuestos</a>
+            <nav >
+                <div id= "menu" class="Menus">
                     <ul>
-                        <li><a href="{% url 'crear_repuesto' %}">Ingresar</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="{% url 'index_empleados' %}">Empleados</a>
-                    <ul>
-                        <li><a href="{% url 'crear_empleados' %}">Ingresar</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="{% url 'index_proveedor' %}">Proveedores</a>
-                    <ul>
-                        <li><a href="{% url 'crear_proveedor'%}">Ingresar</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#">Administrador</a>
-                    <ul>
-                        <li><a href="{% url 'index_vehiculo' %}">Vehiculo</a>
+                        <li><a href="{% url 'index_repuesto' %}">Repuestos</a>
                         <ul>
-                            <li><a href="{% url 'crear_vehiculo' %}">Ingresar</a></li>
-                        </ul></li>
+                            <li><a href="{% url 'crear_repuesto' %}">Ingresar</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="{% url 'index_empleados' %}">Empleados</a>
+                        <ul>
+                            <li><a href="{% url 'crear_empleados' %}">Ingresar</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="{% url 'index_proveedor' %}">Proveedores</a>
+                        <ul>
+                            <li><a href="{% url 'crear_proveedor'%}">Ingresar</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Administrador</a>
+                        <ul>
+                            <li><a href="{% url 'index_vehiculo' %}">Vehiculo</a>
+                            <ul>
+                                <li><a href="{% url 'crear_vehiculo' %}">Ingresar</a></li>
+                            </ul></li>
+                        </ul>
+                        </li>
+                        <li><a href="{% url 'Reporte'%}">Reporte</a></li>
+                        <li><a href="{% url 'BuscarRepuesto' %}"><img src="https://img.icons8.com/office/16/000000/search--v1.png" width="35" height="35"/></a></li>
                     </ul>
-                    </li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#"><img src="https://img.icons8.com/office/16/000000/search--v1.png" width="35" height="35"/></a></li>
-                </ul>   
+                </div>
+                   
             </nav>
         </header>
     </div>
